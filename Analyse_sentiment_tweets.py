@@ -1,7 +1,15 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
 import numpy as np
-tweet = """I've got nothing to do today but smile."""
+tweet = """I have got nothing to do today but smile."""
+
+#hear the tweet
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.setProperty('rate', 100)
+engine.say(tweet)
+engine.runAndWait()
 
 # preprocess tweet
 tweet_words=[]
